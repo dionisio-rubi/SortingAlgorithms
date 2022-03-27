@@ -1,22 +1,31 @@
 #include "SelectionSort.h"
 
+template<typename T>
+SelectionSort<T>::SelectionSort(T arr[], int n)
+    : Sort<T>(arr,n)
+{
+    SelectionSort<T>::arr = Sort<T>::getArr();
+    SelectionSort<T>::size = Sort<T>::getSize();
+    sort();
+}
+
 template <typename T>
-int SelectionSort::findIndexOfLargest(const T a[], int size){
+int SelectionSort<T>::findIndexOfLargest(const T a[], int cSize){
     int index = 0; //index of the largest entry found so far
-    for(int currentIndex = 1; currentIndex < size; currentIndex++){
+    for(int currentIndex = 1; currentIndex < cSize; currentIndex++){
         if(a[currentIndex] > a[index]){
             index = currentIndex;
-            compare++;
+            this->increaseComp();
         }
     }
     return index; //returns largest entry
 }
 
 template <typename T>
-void SelectionSort::sort(T array[], int n) const{
-    for(int last = n-1; last >= 1; last--){
-        int largest = findIndexOfLargest(array, last + 1);
-        std::swap(array[largest], array[last]);
-        swap++;
+void SelectionSort<T>::sort(){
+    for(int last = size-1; last >= 1; last--){
+        int largest = findIndexOfLargest(arr, last + 1);
+        swap(largest, last);
+        this->increaseSwap();
     }
 }

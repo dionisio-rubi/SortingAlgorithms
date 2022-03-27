@@ -1,14 +1,19 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
+#include "Sort.h"
 
 template <typename T>
-class QuickSort: public SortInterface <T>{
+class QuickSort: public Sort<T>{
     private:
-    int swap = 0;
-    int comparison = 0;
+    T *arr;
+    int size;
+    void swap(int currentI, int otherI);
+    void sort() override;
 
     public:
-    void sort(T array[], int n) const;
+    QuickSort(T arr[], int n);
+
+    ~QuickSort() { }
 };
 
 #include "QuickSort.cpp"

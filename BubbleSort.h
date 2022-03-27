@@ -1,15 +1,19 @@
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
+#include "Sort.h"
 
 template <typename T>
-class BubbleSort: public SortInterface <T>{
+class BubbleSort: public Sort <T>{
     private:
-    int swap = 0;
-    int comparison = 0;
+    T *arr;
+    int size;
+    void swap(int currentI, int otherI);
+    void sort() override;
 
     public:
-    void sort(T array[], int n) const;
+    BubbleSort(T arr[], int n);
 
+    ~BubbleSort () { }
 };
 
 #include "BubbleSort.cpp"

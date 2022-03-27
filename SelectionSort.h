@@ -1,15 +1,20 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
+#include "Sort.h"
 
 template <typename T>
-class SelectionSort: public SortInterface <T>{
+class SelectionSort: public Sort<T>{
     private:
-    int swap = 0;
-    int comparison = 0;
+    T *arr;
+    int size;
+    void swap(int currentI, int otherI);
+    void sort() override;
+    int findIndexOfLargest(const T a[], int cSize);
 
     public:
-    int findIndexOfLargest(const T array[], int size);
-    void sort(T array[], int n) const;
+    SelectionSort(T arr[], int n);
+
+    ~SelectionSort () { }
 
 };
 
