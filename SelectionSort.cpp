@@ -1,5 +1,3 @@
-#include "SelectionSort.h"
-
 template<typename T>
 SelectionSort<T>::SelectionSort(T arr[], int n)
     : Sort<T>(arr,n)
@@ -25,7 +23,7 @@ template <typename T>
 void SelectionSort<T>::sort(){
     for(int last = size-1; last >= 1; last--){
         int largest = findIndexOfLargest(arr, last + 1);
-        swap(largest, last);
+        this->swap(largest, last);
         this->increaseSwap();
     }
 }

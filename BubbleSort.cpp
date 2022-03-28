@@ -1,5 +1,3 @@
-#include "BubbleSort.h"
-
 template<typename T>
 BubbleSort<T>::BubbleSort(T arr[], int n)
     : Sort<T>(arr, n)
@@ -20,7 +18,7 @@ void BubbleSort<T>::sort(){
             int nextI = i + 1;
             if(arr[i] > arr[nextI]){
                 this->increaseComp();
-                swap(i, nextI);
+                this->swap(i, nextI);
                 this->increaseSwap();
                 // Sort<T>::increaseSwap();
                 sorted = false;

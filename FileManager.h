@@ -8,7 +8,8 @@ class FileManager{
     private:
 
     public:
-    void newCSV(int array[], int n, std::string isSorted);
+    FileManager() = default;
+    void newCSV(int *array, int n, std::string isSorted, std::string algorithm);
 };
 
 #endif

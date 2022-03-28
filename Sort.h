@@ -26,4 +26,6 @@ class Sort{
     ~Sort() { }
 };
 
+#include "Sort.cpp"
+
 #endif

@@ -1,5 +1,3 @@
-#include "QuickSort.h"
-
 template<typename T>
 QuickSort<T>::QuickSort(T arr[], int n)
     : Sort<T>(arr, n)
@@ -11,7 +9,5 @@ QuickSort<T>::QuickSort(T arr[], int n)
 
 template <typename T>
 void QuickSort<T>::sort(){
-    // if((last - first+1) < MIN_SIZE){
-        
-    // }
+
 }

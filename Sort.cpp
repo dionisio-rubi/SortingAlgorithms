@@ -1,5 +1,3 @@
-#include "Sort.h"
-
 template<typename T>
 Sort<T>::Sort(T arr[], int n)
     : arr(arr)
@@ -11,9 +9,9 @@ Sort<T>::Sort(T arr[], int n)
 
 template<typename T>
 void Sort<T>::swap(int currentI, int otherI){
-    T temp = array[currentI];
-    array[currentI] = array[otherI];
-    array[otherI] = temp;
+    T temp = arr[currentI];
+    arr[currentI] = arr[otherI];
+    arr[otherI] = temp;
 }
 
 template <typename T>
