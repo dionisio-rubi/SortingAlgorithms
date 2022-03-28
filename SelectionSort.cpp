@@ -11,9 +11,9 @@ template <typename T>
 int SelectionSort<T>::findIndexOfLargest(const T a[], int cSize){
     int index = 0; //index of the largest entry found so far
     for(int currentIndex = 1; currentIndex < cSize; currentIndex++){
+        this->increaseComp();
         if(a[currentIndex] > a[index]){
             index = currentIndex;
-            this->increaseComp();
         }
     }
     return index; //returns largest entry

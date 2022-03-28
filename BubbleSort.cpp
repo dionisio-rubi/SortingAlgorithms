@@ -16,8 +16,8 @@ void BubbleSort<T>::sort(){
         sorted = true; //assume that it's sorted
         for(int i = 0; i < size - pass; i++){
             int nextI = i + 1;
+            this->increaseComp();
             if(arr[i] > arr[nextI]){
-                this->increaseComp();
                 this->swap(i, nextI);
                 this->increaseSwap();
                 // Sort<T>::increaseSwap();

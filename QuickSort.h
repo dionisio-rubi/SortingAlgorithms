@@ -7,8 +7,10 @@ class QuickSort: public Sort<T>{
     private:
     T *arr;
     int size;
-    // void swap(int currentI, int otherI);
     void sort() override;
+    void sort(int start, int end);
+    int partition(int start, int end);
+    void sortSML(int one, int mid, int last);
 
     public:
     QuickSort(T arr[], int n);

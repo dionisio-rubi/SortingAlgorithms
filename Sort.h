@@ -11,7 +11,6 @@ class Sort{
 
     public:
     Sort(T arr[], int n);
-    // virtual void sort(T array[]) = 0;
     virtual void sort() = 0;
     void swap(int currentI, int otherI);
 
