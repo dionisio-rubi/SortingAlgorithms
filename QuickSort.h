@@ -8,9 +8,8 @@ class QuickSort: public Sort<T>{
     T *arr;
     int size;
     void sort() override;
-    void sort(int start, int end);
+    void quickSort(int start, int end);
     int partition(int start, int end);
-    void sortSML(int one, int mid, int last);
 
     public:
     QuickSort(T arr[], int n);
